@@ -8,3 +8,18 @@
 <p>Max Mudpuppy handed Octavius Otter two slips of paper. Octavius Otter, never having handled paper before, accidentally got the first slip of paper so soggy that it became impossible to read! (Luckily, he learned from his mistake before handling the other sheet.) Octavius recalls that the first piece of paper was some formula for&nbsp;a function <em>f(x)</em>, along with a sketch of a curve undernearth the formula. While he does not entirely remember the formula, he does remember that it was a cubic equation with no constant term and with positive coefficients on&nbsp;the <em>x</em><sup>3</sup>, <em>x</em><sup>2</sup>, and <em>x</em> terms. The second sheet of paper reads:</p>
 <p>As you can see from the graph of <em>f</em>, it does not have a unique inverse function. However, if we restrict the domain of <em>f</em> to [0, 1], then <em>f</em> is strictly increasing and so does have a unique inverse; for instance, <em>f</em>(<em>x</em>)= 6 has multiple solutions over all of&nbsp;<strong>R</strong>, but the only solution in the interval [0, 1] to <em>f</em>(<em>x</em>) = 6 is <em>x</em> = 1. Compute</p>
 <p style="text-align: center;"><span style="font-size: 200%;"><em><img src="images/integral.png"/></em><em><br /></em></span></p>
+
+<p> Answer: <input type="text" id="password"><br></p>
+<button onclick="validate()">Submit</button>
+
+<script>
+function validate() {
+  // to prevent one from just guessing the right answer, the validation is a little... complicated
+  var x = document.getElementById("password").value
+  if (x * x *x * x *x + 30 * x * x * x * x + 145 * x * x * x - 1516 * x * x - 3318 * x - 3492 == 0) {
+	window.location.href = "https://mbarz6.github.io/pacific2win.html";
+  } else {
+	alert("Incorrect!");
+  }
+}
+</script>
