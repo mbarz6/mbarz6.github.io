@@ -61,9 +61,8 @@ function validate() {
   var j = document.getElementById("j").value
   
   var matr = [[a, b, c], [e, f, g], [h, i, j]];
-  alert(multiplyMatrices(matr, multiplyMatrices(matr, matr)));
-	
-  if (multiplyMatrices(matr, multiplyMatrices(matr, matr)) == [[2, 0, 0], [0, 2, 0], [0, 0, 2]]) {
+  var cubed = multiplyMatrices(matr, multiplyMatrices(matr, matr));	
+  if (cubed[0][0] == 2 && cubed[0][1] == 0 && cubed[0][2] == 0 && cubed[1][0] == 0 && cubed[1][1] == 2 && cubed[1][2] == 0 && cubed[2][0] == 0 && cubed[2][1] == 0 && cubed[2][2] == 2) {
 	  window.location.href = "https://mbarz6.github.io/indianwin.html";
   } else {
 	  alert("Incorrect!");
