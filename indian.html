@@ -61,7 +61,7 @@ function validate() {
   var j = document.getElementById("j").value
   
   var matr = [[a, b, c], [e, f, g], [h, i, j]];
-  alert(matr);
+  alert(multiplyMatrices(matr, multiplyMatrices(matr, matr)));
 	
   if (multiplyMatrices(matr, multiplyMatrices(matr, matr)) == [[2, 0, 0], [0, 2, 0], [0, 0, 2]]) {
 	  window.location.href = "https://mbarz6.github.io/indianwin.html";
