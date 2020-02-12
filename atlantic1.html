@@ -7,3 +7,18 @@
 <p style="text-align: center;"><img src="images/submarineintegral.png"/></p>
 <p style="text-align: left;">Leah knows the true length of the path the submarine will follow. However, to determine the ETA of the submarine (which she needs to know to intercept it without it noticing her), she'll need to know it's speed. She plans to reverse engineer the submarine's speed by calculating the distance <em>D</em> the submarine <em>thinks</em> it travels between (1, 1) and (1, <em>e</em><sup>2</sup>).</p>
 <p style="text-align: left;">Help Leah by computing <em>D</em>.</p>
+
+<p> Answer: <input type="text" id="password"><br></p>
+<button onclick="validate()">Submit</button>
+
+<script>
+function validate() {
+  // to prevent one from just guessing the right answer, the validation is a little... complicated
+  var x = document.getElementById("password").value
+  if (x * x *x + 2 * x * x + 13 * x - 42 == 0) {
+	window.location.href = "https://mbarz6.github.io/atlantic1win.html";
+  } else {
+	alert("Incorrect!");
+  }
+}
+</script>
