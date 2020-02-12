@@ -26,6 +26,29 @@
   <tr>
     <td class="tg-0lax"><input type="text" style="width: 51px;" id="h"></td>
     <td class="tg-0lax"><input type="text" style="width: 51px;" id="i"></td>
-    <td class="tg-0lax"><input type="text" style="width: 51px;" id="k"></td>
+    <td class="tg-0lax"><input type="text" style="width: 51px;" id="j"></td>
   </tr>
 </table>
+<button onclick="validate()">Submit</button>
+
+<script>
+function validate() {
+  // this validation function actually just cubes your matrix
+  // so cheating this validation is actually impossible!
+  var a = document.getElementById("a").value;
+  var b = document.getElementById("b").value;
+  var c = document.getElementById("c").value;
+  var e = document.getElementById("e").value;
+  var f = document.getElementById("f").value;
+  var g = document.getElementById("g").value;
+  var h = document.getElementById("h").value;
+  var i = document.getElementById("i").value;
+  var j = document.getElementById("j").value
+  
+  if (a *a + b *e + c*h == 2 && a * b + b * f + c * i == 0 && a * c + b *g + c * j == 0 && a * e + e * f + g * h == 0 && b *e + f * f + g * i == 2 && c * e + f * g + g * j == 0 && a * h + e * i + j * h == 0 && b * h + i * f + i * j == 0 && h * c + i * g + j * j == 2) {
+	  window.location.href = "https://mbarz6.github.io/indianwin.html";
+  } else {
+	  alert("Incorrect!");
+  }
+}
+</script>
