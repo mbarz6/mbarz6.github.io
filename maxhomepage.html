@@ -5,7 +5,16 @@
 
 <script>
 function validate() {
+  // haha! If you thought you could find my password just by checking the password verification code, you'd be wrong!
+  // I invented my own hashing algorithm, which is impossible to crack!
+  var password = document.getElementById("password").value;	
+  var i;
+  var hashed = 0;
+  for (i = 0; i < password.length; i++) {
+  	hashed += password.charCodeAt(i);
+  }
   if (document.getElementById("password").value == "mudpuppiesrule") {
+	alert(hashed);
 	window.location.href = "https://mbarz6.github.io/maxafterpass.html";
   } else {
 	alert("Incorrect password!");
