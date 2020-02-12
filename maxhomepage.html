@@ -13,8 +13,7 @@ function validate() {
   for (i = 0; i < password.length; i++) {
   	hashed += password.charCodeAt(i);
   }
-  if (document.getElementById("password").value == "mudpuppiesrule") {
-	alert(hashed);
+  if (hashed == 1540) {
 	window.location.href = "https://mbarz6.github.io/maxafterpass.html";
   } else {
 	alert("Incorrect password!");
