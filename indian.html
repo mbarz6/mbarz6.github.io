@@ -32,6 +32,21 @@
 <button onclick="validate()">Submit</button>
 
 <script>
+function multiplyMatrices(m1, m2) {
+    var result = [];
+    for (var i = 0; i < m1.length; i++) {
+        result[i] = [];
+        for (var j = 0; j < m2[0].length; j++) {
+            var sum = 0;
+            for (var k = 0; k < m1[0].length; k++) {
+                sum += m1[i][k] * m2[k][j];
+            }
+            result[i][j] = sum;
+        }
+    }
+    return result;
+}
+	
 function validate() {
   // this validation function actually just cubes your matrix
   // so cheating this validation is actually impossible!
@@ -45,7 +60,10 @@ function validate() {
   var i = document.getElementById("i").value;
   var j = document.getElementById("j").value
   
-  if (a *a * a + a * b *e + a * c*h + a * b * e + b * e *f + b * g * h + c * a * h + c * e * i + c * j * h == 2 && a * a * b + a * b * f + a * c * i + b * b * e + b * f * f + b * g * i + c * b * h + c * i * f + c * i * j == 0 && a * a * c + a * b *g + a* c * j + b * c * e + b * f * g + b * g * j + c * h * c + c * i * h + c * j * j == 0 && a * a * e + e * b * e + e * c * h + f * a * e + f * e * f + f * g * h + g * a * h + g * e * i + g * j * h == 0 && e * a * b + e * b * f + e * c * i + f * b *e + f * f * f +f * g * i + g * b * h + g * i * f + g * i * j == 2 && e * a * c + e * b *g + e * c * j + f * c * e + f * f * g + f * g * j + g * h * c + g * i * g + g * j * j == 0 && j * a * h + j * e * i + j * j * h + h * a * a + h * b * e + h * c * h + i * a * e + i *e * f + i * g *h == 0 && h * a * b + h * b * f + h * c * i + i * b * e + i * f * f + i * g * i + j* b * h + j* i * f + j* i * j == 0 && h * a * c + h * b * g + h * c * j + i * c * e + i * f * g + i * g *j + j*h * c + j* i * g + j* j * j == 2) {
+  var matr = [[a, b, c], [e, f, g], [h, i, j]];
+  alert(matr);
+	
+  if (multiplyMatrices(matr, multiplyMatrices(matr, matr)) == [[2, 0, 0], [0, 2, 0], [0, 0, 2]]) {
 	  window.location.href = "https://mbarz6.github.io/indianwin.html";
   } else {
 	  alert("Incorrect!");
