@@ -17,6 +17,7 @@ p {
 
 <p> Answer: <input type="text" id="password"><br></p>
 <p><button onclick="validate()">Submit</button></p>
+<p><button onclick="validate2()">Return to map</button>
 
 <script>
 function validate() {
@@ -28,5 +29,9 @@ function validate() {
   } else {
 	alert("Incorrect!");
   }
+	function validate2() {
+		window.location.href = "https://mbarz6.github.io/index.html";
+		window.scrollBy(0, 100);
+	}
 }
 </script>
