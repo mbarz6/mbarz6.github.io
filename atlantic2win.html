@@ -1,0 +1,29 @@
+ <style>
+p {
+  margin-right: 200px;
+  margin-left: 200px;
+}
+</style>
+
+<h2 style="text-align: center;"><strong>Lionfish Saved!</strong></h2>
+<p>Thanks to you, the lionfish are heading back home!</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">Liam is finally reunited with his family!</p>
+
+<p><button onclick="validate2()">Return to map</button>
+
+<p>Want to go back in time? Click the button to reset this puzzle.</p>
+<p><button onclick="validate1()">Reset pacific1</button></p>
+
+<script>
+	function validate2() {
+		document.cookie = "senttomap = yes";
+		window.location.href = "https://mbarz6.github.io/index.html";
+	}
+	function validate1() {
+		if (confirm("Are you sure? Clicking this will force you to redo this problem.")) {
+			document.cookie = "atlantic2 = reset";
+			window.location.href = "https://mbarz6.github.io/atlantic2.html";
+		}
+	}
+</script>
