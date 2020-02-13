@@ -1,5 +1,15 @@
+ <style>
+p {
+  margin-right: 200px;
+  margin-left: 200px;
+}
+</style>
 <h1 style="text-align: center;">Sea Turtle Pandemic</h1>
 <p>Loggerhead sea turtle eggs are extremely vulnerable to disease. Max Mudpuppy has his hands on a bioweapon capable of flooding the Atlantic ocean with bacteria that would decimate the Loggerhead sea turtle population! He has loaded his custom built autonomous submarine with the bacteria, and has set it to attack. Fortunately, the clever sea turtle Leah managed to hack into Max's submarine remotely. She can read the source code for the submarine, as well as the remote commands that Max is giving it. Her plans are to intercept the submarine just as it begins to unload the bacteria, so that she can contain the leak. Leah believes she has correctly predicted the route the submarine will take, but has one problem: The submarine is programmed to automatically swerve away if it detects sea turtle interference! Thus, Leah can only engage her plan at the last possible second, when the submarine switches from movement mode to bacteria spraying mode, and its protections turn off as it sprays. Because timing is of the essence, Leah will need your help to correctly predict when the submarine will begin to spray the bacteria!</p>
+<figure style="text-align:center;">
+	<img class="detail__media__img-highres  js-detail-img  js-detail-img-high" src="images/leah.jpg"/>
+	<figcaption> Leah, practicing her sprint so she's ready to intercept the submarine. </figcaption>
+</figure>
 <p>Max's code represents the floor of the Atlantic ocean as an <em>xy</em>-plane bounded by <em>y &gt; 0, y &lt; 100, x &gt; -100, </em>and <em>x &gt; 100</em>. It seems that Max did not pay much attention in his high school geometry course (in his defense, it is difficult to hear your teacher when you're both underwater), and so never learned that the shortest path between two points is a straight line. So, when instructed to move from point <em>P</em> to point <em>Q</em>, the submarine is&nbsp;<em>not</em> programmed to simply go in the straight line from <em>P</em> to <em>Q</em>. Instead, it is programmed to find a parametric curve (<em>x</em>(<em>t</em>),&nbsp;<em>y</em>(<em>t</em>)) which passes through <em>P</em> at time <em>t</em>=0 and passed through <em>Q</em> at time <em>t=</em>1 and has minimal arclength.</p>
 <p>If correctly implemented, this procedure would just cause the submarine to move in a straight line. However, Leah noticed that Max Mudpuppy has a typo in his arclength computation code! So, instead of minimizing arclength, the program actually finds the curve minimizing the quantity</p>
 <p style="text-align: center;"><img src="images/submarineintegral.png"/></p>
@@ -9,16 +19,22 @@
 <p style="text-align: left;">Help Leah by computing <em>D</em>.</p>
 
 <p> Answer: <input type="text" id="password"><br></p>
-<button onclick="validate()">Submit</button>
+<p><button onclick="validate()">Submit</button></p>
+<p><button onclick="validate2()">Return to map</button>
 
 <script>
 function validate() {
   // to prevent one from just guessing the right answer, the validation is a little... complicated
   var x = document.getElementById("password").value
   if (x * x *x + 2 * x * x + 13 * x - 42 == 0) {
+	  document.cookie = "atlantic1 = done; expires=Fri, 31 Dec 9999 23:59:59 GMT";
 	window.location.href = "https://mbarz6.github.io/atlantic1win.html";
   } else {
 	alert("Incorrect!");
   }
+	function validate2() {
+		document.cookie = "senttomap = yes";
+		window.location.href = "https://mbarz6.github.io/index.html";
+	}
 }
 </script>
