@@ -5,7 +5,7 @@ p {
 }
 </style>
 <h1 style="text-align: center;"><strong>Penguin Baby Rescue</strong></h1>
-<p>Parker and Patricia Penguin had everything going well: They had good jobs, they loved each other, and they were content with life. Until Max Mudpuppy swiped their child, Puck Penguin! The only way to retrieve Puck is to answer Max Mudpuppy's devilish problem. Unfortunately, Parker, Patricia, and the penguin police working to find Puck are all unable to read English, turning Max's problem into a truly impossible task. Can you help them save Puck?</p>
+<p>Parker and Patricia Penguin had everything going well: They had good jobs, they loved each other, and they were content with life. But then Max Mudpuppy swiped their child, Puck Penguin! The only way to retrieve Puck is to answer Max Mudpuppy's devilish problem. Unfortunately, Parker, Patricia, and the penguin police working to find Puck are all unable to read English, turning Max's problem into a truly impossible task. Can you help them save Puck?</p>
 <figure style="text-align:center;">
 	<img class="detail__media__img-highres  js-detail-img  js-detail-img-high" style="width: 491px; height: 368px;" src="images/penguinssad.jpg"/>
 	<figcaption> Patricia and Parker, looking for Puck. Puck is not likely on the ground in front of them, but searching gives them hope. </figcaption>
@@ -23,6 +23,7 @@ function validate() {
   // to prevent one from just guessing the right answer, the validation is a little... complicated
   var x = document.getElementById("password").value
   if (x * x * x * x * x - 11 * x * x * x * x - 23 * x * x * x - 37 * x * x - 24 * x - 26 == 0) {
+	document.cookie = "pacific1 = done; expires=Fri, 31 Dec 9999 23:59:59 GMT";
 	window.location.href = "https://mbarz6.github.io/pacific1win.html";
   } else {
 	alert("Incorrect!");
