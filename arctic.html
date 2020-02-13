@@ -1,3 +1,10 @@
+ <style>
+p {
+  margin-right: 200px;
+  margin-left: 200px;
+}
+</style>
+
 <h1 style="text-align: center;">Echolocation Disruption!</h1>
 <p>Beluga whales use echolocation to help navigate.&nbsp;</p>
 <p style="text-align: center;"><img src="images/sadbeluga.jpg"/><br>This Beluga has no idea where he's going.</p>
@@ -6,16 +13,22 @@
 <p><em>f</em> :&nbsp;<strong>R</strong>&nbsp;- {0} &rarr;&nbsp;<strong>R</strong> is a continuous function defined on the set of non-zero real numbers.&nbsp;<em>f</em> is differentiable on its domain, and&nbsp;<em>f'</em>(<em>x</em>) = 1/<em>x&nbsp;</em>for all nonzero&nbsp;<em>x</em>.&nbsp;<em>f</em>(1) = -34 and&nbsp;<em>f</em>(-1) = 17. Find&nbsp;<em>f</em>(<em>e</em><sup>2</sup>)&nbsp;+ <em>f</em>(-<em>e</em><sup>3</sup>).&nbsp;&nbsp;</p>
 
 <p> Answer: <input type="text" id="password"><br></p>
-<button onclick="validate()">Submit</button>
+<p><button onclick="validate()">Submit</button></p>
+<p><button onclick="validate2()">Return to map</button>
 
 <script>
 function validate() {
   // to prevent one from just guessing the right answer, the validation is a little... complicated
   var x = document.getElementById("password").value
   if (x * x *x * x * x + 12 * x * x * x * x + 29 * x * x * x + 348 * x * x + 204 * x + 2448 == 0) {
+	  document.cookie = "arctic = done";
 	window.location.href = "https://mbarz6.github.io/arcticwin.html";
   } else {
 	alert("Incorrect!");
   }
 }
+	function validate2() {
+		document.cookie = "senttomap = yes";
+		window.location.href = "https://mbarz6.github.io/index.html";
+	}
 </script>
