@@ -23,6 +23,14 @@ p {
 	<button onclick="indian()">Indian</button></p>  
   
 <script>
+window.onbeforeunload = function () {
+  var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)senttomap\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+  if (cookieValue == "yes") {
+	document.cookie = "senttomap = no";  
+  	window.scrollTo(0, 100);    
+  }
+}
+	
 function pacific1() {
 	var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)pacific1\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 	if (cookieValue == "done") {
