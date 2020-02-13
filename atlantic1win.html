@@ -1,4 +1,28 @@
+ <style>
+p {
+  margin-right: 200px;
+  margin-left: 200px;
+}
+</style>
 <h2 style="text-align: center;">Baby Loggerhead Sea Turtles Saved!</h2>
 <p>Thanks to your help, Leah was able to stop Max Mudpuppy's evil submarine! The Loggerhead sea turtle eggs were not impacted by the bacteria, and successfully hatched!</p>
 <p><img style="display: block; margin-left: auto; margin-right: auto;" src="images/babyturtles.jpeg"></p>
 <p style="text-align: center;">New hatchlings!</p>
+
+<p><button onclick="validate2()">Return to map</button>
+
+<p>Want to go back in time? Click the button to reset this puzzle.</p>
+<p><button onclick="validate1()">Reset atlantic1</button></p>
+
+<script>
+	function validate2() {
+		document.cookie = "senttomap = yes";
+		window.location.href = "https://mbarz6.github.io/index.html";
+	}
+	function validate1() {
+		if (confirm("Are you sure? Clicking this will force you to redo this problem.")) {
+			document.cookie = "atlantic1 = reset";
+			window.location.href = "https://mbarz6.github.io/pacific1.html";
+		}
+	}
+</script>
