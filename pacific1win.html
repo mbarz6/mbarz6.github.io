@@ -23,7 +23,9 @@ p {
 		window.location.href = "https://mbarz6.github.io/index.html";
 	}
 	function validate1() {
-		document.cookie = "pacific1 = reset";
-		window.location.href = "https://mbarz6.github.io/pacific1.html";
+		if (confirm("Are you sure? Clicking this will force you to redo this problem.")) {
+			document.cookie = "pacific1 = reset";
+			window.location.href = "https://mbarz6.github.io/pacific1.html";
+		}
 	}
 </script>
