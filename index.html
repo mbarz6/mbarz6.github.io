@@ -27,7 +27,7 @@ window.onbeforeunload = function () {
   var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)senttomap\s*\=\s*([^;]*).*$)|^.*$/, "$1");
   if (cookieValue == "yes") {
 	document.cookie = "senttomap = no";  
-  	window.scrollTo(0, 100);    
+  	window.scrollBy(0, 1000);    
   }
 }
 	
