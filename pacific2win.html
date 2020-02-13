@@ -1,6 +1,31 @@
+ <style>
+p {
+  margin-right: 200px;
+  margin-left: 200px;
+}
+</style>
+
 <h1 style="text-align: center;"><strong>Sea Otter Protections Restored!</strong></h1>
 <p>The public now looks favorably upon sea otters, and hunting has declined! Octavius personally thanks you, and welcomes you to any shedded sea otter fur he happens across whenever you so desire.</p>
 <figure style="text-align:center;">
 	<img class="detail__media__img-highres  js-detail-img  js-detail-img-high" src="images/ottertime2.jpg"/>
 	<figcaption> Octavius Otter celebrates! </figcaption>
 </figure>
+
+<p><button onclick="validate2()">Return to map</button>
+
+<p>Want to go back in time? Click the button to reset this puzzle.</p>
+<p><button onclick="validate1()">Reset pacific2</button></p>
+
+<script>
+	function validate2() {
+		document.cookie = "senttomap = yes";
+		window.location.href = "https://mbarz6.github.io/index.html";
+	}
+	function validate1() {
+		if (confirm("Are you sure? Clicking this will force you to redo this problem.")) {
+			document.cookie = "pacific2 = reset";
+			window.location.href = "https://mbarz6.github.io/pacific2.html";
+		}
+	}
+</script>
