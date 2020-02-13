@@ -1,3 +1,9 @@
+ <style>
+p {
+  margin-right: 200px;
+  margin-left: 200px;
+}
+</style>
 <h1 style="text-align: center;"><strong>Anti-Sea Otter Propaganda</strong></h1>
 <p>Octavius Otter is a sea otter. Sea otters have were extensively hunted for their fur for hundreds of years, bringing the species to brink of extinction, until sea otter conservation efforts saved them. However, Max Mudpuppy has launched an anti-sea otter propaganda campaign! This campaign has led to a public outcry against sea otters, threatening the conservation effort as politicians remove sea otter hunting restrictions to quell the fears of their constituents. Octavius does not want to die... can you help?</p>
 <figure style="text-align:center;">
@@ -5,12 +11,13 @@
 	<figcaption> Octavius Otter is a little apprehensive to be near you, a human, after all otter hunting regulations have been lifted.</figcaption>
 </figure>
 <h2 style="text-align: center;"><strong> Max Mudpuppy's Otterian Riddle</strong></h2>
-<p>Max Mudpuppy handed Octavius Otter two slips of paper. Octavius Otter, never having handled paper before, accidentally got the first slip of paper so soggy that it became impossible to read! (Luckily, he learned from his mistake before handling the other sheet.) Octavius recalls that the first piece of paper was some formula for&nbsp;a function <em>f(x)</em>, along with a sketch of a curve undernearth the formula. While he does not entirely remember the formula, he does remember that it was a cubic equation with no constant term and with positive coefficients on&nbsp;the <em>x</em><sup>3</sup>, <em>x</em><sup>2</sup>, and <em>x</em> terms. The second sheet of paper reads:</p>
+<p>Max Mudpuppy handed Octavius Otter two slips of paper. Octavius Otter, never having handled paper before, accidentally got the first slip of paper so soggy that it became impossible to read! (Luckily, he learned from his mistake and dried his hands before handling the other sheet.) Octavius recalls that the first piece of paper was some formula for&nbsp;a function <em>f(x)</em>, along with a sketch of a curve undernearth the formula. While he does not entirely remember the formula, he does remember that it was a cubic equation with no constant term and with positive coefficients on&nbsp;the <em>x</em><sup>3</sup>, <em>x</em><sup>2</sup>, and <em>x</em> terms. The second sheet of paper reads:</p>
 <p>As you can see from the graph of <em>f</em>, it does not have a unique inverse function. However, if we restrict the domain of <em>f</em> to [0, 1], then <em>f</em> is strictly increasing and so does have a unique inverse; for instance, <em>f</em>(<em>x</em>)= 6 has multiple solutions over all of&nbsp;<strong>R</strong>, but the only solution in the interval [0, 1] to <em>f</em>(<em>x</em>) = 6 is <em>x</em> = 1. Compute</p>
 <p style="text-align: center;"><span style="font-size: 200%;"><em><img src="images/integral.png"/></em><em><br /></em></span></p>
 
 <p> Answer: <input type="text" id="password"><br></p>
-<button onclick="validate()">Submit</button>
+<p><button onclick="validate()">Submit</button></p>
+<p><button onclick="validate2()">Return to map</button>
 
 <script>
 function validate() {
@@ -22,4 +29,8 @@ function validate() {
 	alert("Incorrect!");
   }
 }
+	function validate2() {
+		document.cookie = "senttomap = yes";
+		window.location.href = "https://mbarz6.github.io/index.html";
+	}
 </script>
