@@ -6,12 +6,17 @@
 <p>Max Mudpuppy used to think that cubic polynomials without roots were incomplete, but now he realizes that they're just temporarily separated from their roots in&nbsp;<strong>F</strong><sub>13<sup>3</sup></sub>. Perhaps he also is just temporarily separated from happiness.&nbsp;</p>
 <p>Regardless, he released Puck.</p>
 <p>Parker, Patricia, and Puck are reunited in one big happy penguin family, at last! Patricia and Parker likely would thank you if they understood what you did to save Puck, but alas, penguins do not speak English.</p>
+<p><button onclick="validate2()">Go back home</button>
 
 <p>Want to go back in time? Click the button to reset this puzzle.</p>
-<button onclick="validate()">Reset pacific1</button>
+<button onclick="validate1()">Reset pacific1</button>
 
 <script>
-	function validate() {
+	function validate2() {
+		window.location.href = "https://mbarz6.github.io/index.html";	
+	}
+	function validate1() {
 		document.cookie = "pacific1 = reset";
+		window.location.href = "https://mbarz6.github.io/pacific1.html";
 	}
 </script>
