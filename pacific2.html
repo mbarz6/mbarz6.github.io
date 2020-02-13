@@ -24,7 +24,8 @@ function validate() {
   // to prevent one from just guessing the right answer, the validation is a little... complicated
   var x = document.getElementById("password").value
   if (x * x *x * x *x + 30 * x * x * x * x + 145 * x * x * x - 1516 * x * x - 3318 * x - 3492 == 0) {
-	window.location.href = "https://mbarz6.github.io/pacific2win.html";
+	document.cookie = "pacific2 = done; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+	  window.location.href = "https://mbarz6.github.io/pacific2win.html";
   } else {
 	alert("Incorrect!");
   }
