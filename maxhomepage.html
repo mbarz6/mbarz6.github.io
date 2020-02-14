@@ -11,9 +11,11 @@ function validate() {
   var i;
   var hashed = 0;
   for (i = 0; i < password.length; i++) {
-  	hashed += password.charCodeAt((i * i) % password.length);
+  	hashed += password.charCodeAt((i * i) % password.length) * (i + 1);
   }
-  if (hashed == 1548) {
+  hashed += password.length;
+
+  if (hashed == 11635) {
 	window.location.href = "https://mbarz6.github.io/maxafterpass.html";
   } else {
 	alert("Incorrect password!");
