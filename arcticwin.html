@@ -10,7 +10,7 @@ p {
 <p><button onclick="validate2()">Return to map</button>
 
 <p>Want to go back in time? Click the button to reset this puzzle.</p>
-<p><button onclick="validate1()">Reset pacific1</button></p>
+<p><button onclick="validate1()">Reset arctic</button></p>
 
 <p><em>Math note: This problem illustrates a gap in the standard formula for the indefinite integral of dx/x as the natural log of |x|, since the constant on the negative side could be different than the constant on the positive side.</em></p>
 
@@ -21,7 +21,7 @@ p {
 	}
 	function validate1() {
 		if (confirm("Are you sure? Clicking this will force you to redo this problem.")) {
-			document.cookie = "pacific1 = reset";
+			document.cookie = "arctic = reset";
 			window.location.href = "https://mbarz6.github.io/pacific1.html";
 		}
 	}
