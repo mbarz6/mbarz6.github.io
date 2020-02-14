@@ -21,8 +21,25 @@ p {
   <button onclick="atlantic2()">Atlantic 2</button>  
   <button onclick="arctic()">Arctic</button>  
 	<button onclick="indian()">Indian</button></p>  
+<br>
+	<p><button onclick="gameover()">A Final Message</button></p>
   
 <script>
+function gameover() {
+	var cookieValue1 = document.cookie.replace(/(?:(?:^|.*;\s*)pacific1\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	var cookieValue2 = document.cookie.replace(/(?:(?:^|.*;\s*)pacific2\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	var cookieValue3 = document.cookie.replace(/(?:(?:^|.*;\s*)atlantic1\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	var cookieValue4 = document.cookie.replace(/(?:(?:^|.*;\s*)atlantic2\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	var cookieValue5 = document.cookie.replace(/(?:(?:^|.*;\s*)arctic\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	var cookieValue6 = document.cookie.replace(/(?:(?:^|.*;\s*)indian\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	
+	if (cookieValue1 == "done" && cookieValue2 == "done" && cookieValue3 == "done" && cookieValue4 == "done" && cookieValue5 == "done" && cookieValue6 == "done") {
+		window.location.href = "https://mbarz6.github.io/final.html";
+	} else {
+		alert("You must complete all the puzzles to access your reward!");
+	}
+}	
+	
  function onbefore() {
   var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)senttomap\s*\=\s*([^;]*).*$)|^.*$/, "$1");
   if (cookieValue == "yes") {
