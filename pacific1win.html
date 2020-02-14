@@ -17,6 +17,8 @@ p {
 <p>Want to go back in time? Click the button to reset this puzzle.</p>
 <p><button onclick="validate1()">Reset pacific1</button></p>
 
+<p><em>Math note: The number of monic irreducible cubics modulo </em>p<em> can be calculated as </em>(p<sup>3</sup> - p)/3<em> because each irreducible cubic has a solution in the finite field on </em>p<sup>3</sup><em> elements, and so we have </em>p<sup>3</sup> - p<em> roots for irreducible cubics if we discount the original </em>p<em> numbers, and then divide by 3 since each cubic has 3 roots. A nice analogue to think about is to adapt this formula for finding the number of irreducibles of any degree; the first solution to this problem is credited to Gauss.</em></p>
+
 <script>
 	function validate2() {
 		document.cookie = "senttomap = yes";
