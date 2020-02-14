@@ -21,7 +21,7 @@ function validate() {
   // to prevent one from just guessing the right answer, the validation is a little... complicated
   var x = document.getElementById("password").value
   if (x * x *x * x * x + 12 * x * x * x * x + 29 * x * x * x + 348 * x * x + 204 * x + 2448 == 0) {
-	  document.cookie = "arctic = done";
+	  document.cookie = "arctic = done; expires=Fri, 31 Dec 9999 23:59:59 GMT";
 	window.location.href = "https://mbarz6.github.io/arcticwin.html";
   } else {
 	alert("Incorrect!");
