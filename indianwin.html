@@ -1,4 +1,29 @@
+ <style>
+p {
+  margin-right: 200px;
+  margin-left: 200px;
+}
+</style>
 <h1 style="text-align: center;">Dolphin Developers Directed</h1>
 <p style="text-align: center;"><img src="images/happydolphin.jpeg" width="50%" height="50%"/></p>
 <p style="text-align: center;">This dolphin programmer is going up for air now that she no longer fears Max Mudpuppy.</p>
 <p>Thanks to your work, Max Mudpuppy was pleased to discover that dolphin's software could handle his beloved cube root of 2 all along! He decides not to attack the dolphins.</p>
+<p><button onclick="validate2()">Return to map</button>
+
+<p>Want to go back in time? Click the button to reset this puzzle.</p>
+<p><button onclick="validate1()">Reset indian</button></p>
+
+<p><em>Math note: It turns out that every algebraic number of degree </em>n<em> is associated with an </em>n-by-n<em> matrix of rational coefficients which obeys the same polynomials as the algebraic number. If the number is an algebraic integer, the matrix can be guaranteed to have integral coefficients. One way of thinking about this result is as an explicit construction performed with the Cayley-Hamiliton Theorem. Another way of viewing it is to notice that if the algebraic number is </em>a<em>, then the smallest subfield of the complex numbers containing the rational numbers and </em>a<em> is a vector space over the rational numbers of a certain (finite) dimension. Then, we can view multiplication by </em>a<em> to be a linear transformation of this vector space, and the associated matrix has the desired properties.</em></p>
+
+<script>
+	function validate2() {
+		document.cookie = "senttomap = yes";
+		window.location.href = "https://mbarz6.github.io/index.html";
+	}
+	function validate1() {
+		if (confirm("Are you sure? Clicking this will force you to redo this problem.")) {
+			document.cookie = "indian = reset";
+			window.location.href = "https://mbarz6.github.io/indian.html";
+		}
+	}
+</script>
