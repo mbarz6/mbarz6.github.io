@@ -1,3 +1,9 @@
+  <style>
+p {
+  margin-right: 200px;
+  margin-left: 200px;
+}
+</style>
 <h1 style="text-align: center;">Diving Dolphin Deals</h1>
 <p style="text-align: center;"><img src="images/lesshappydolphin.jpeg" alt="" /></p>
 <p style="text-align: center;">This dolphin programmer is hiding underwater.</p>
@@ -6,7 +12,7 @@
 <p><em>Riding Sine Waves</em> already has built-in matrix arithmetic. One of the dolphins on the design team, Kat, recalls that there is a 3 by 3 matrix <em>M</em>&nbsp;with integer coefficients obeying the equation&nbsp;<em>M</em><sup>3&nbsp;</sup>= 2<em>I</em>, where&nbsp;<em>I</em> is the 3 by 3 identity matrix. If they can find that matrix&nbsp;<em>M</em>, they can perform cube root of 2 arithmetic without needing to re-design their software!</p>
 <p>Find a 3 by 3 matrix&nbsp;<em>M&nbsp;</em>which has integer coefficients and cubes to&nbsp;2<em>I</em><em>.</em> Input the coefficients of that matrix.</p>
 
-<style type="text/css">
+<p><style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
@@ -28,8 +34,9 @@
     <td class="tg-0lax"><input type="text" style="width: 51px;" id="i"></td>
     <td class="tg-0lax"><input type="text" style="width: 51px;" id="j"></td>
   </tr>
-</table>
-<button onclick="validate()">Submit</button>
+</table></p>
+<p><button onclick="validate()">Submit</button></p>
+<p><button onclick="validate2()">Return to map</button>
 
 <script>
 function multiplyMatrices(m1, m2) {
@@ -63,9 +70,14 @@ function validate() {
   var matr = [[a, b, c], [e, f, g], [h, i, j]];
   var cubed = multiplyMatrices(matr, multiplyMatrices(matr, matr));	
   if (cubed[0][0] == 2 && cubed[0][1] == 0 && cubed[0][2] == 0 && cubed[1][0] == 0 && cubed[1][1] == 2 && cubed[1][2] == 0 && cubed[2][0] == 0 && cubed[2][1] == 0 && cubed[2][2] == 2) {
+	  document.cookie = "pacific1 = done; expires=Fri, 31 Dec 9999 23:59:59 GMT";
 	  window.location.href = "https://mbarz6.github.io/indianwin.html";
   } else {
 	  alert("Incorrect!");
   }
 }
+	function validate2() {
+		document.cookie = "senttomap = yes";
+		window.location.href = "https://mbarz6.github.io/index.html";
+	}
 </script>
