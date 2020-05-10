@@ -2,7 +2,7 @@
 
 <iframe src="https://drive.google.com/file/d/1cwIEJZrN3oi8iop6DeNE-2Vi9flaPnmh/preview" width="640" height="480"></iframe>
 
-<p>Can you help out this poor yellow pig‽</p>
+<p>Can you help out this poor yellow pig‽ While it's hard to see precisely in the video, my super accurate eyeballs have determined that the pig's yellow is (250, 250, 55), and the discolored oink is (0, 0, 179).</p>
 <p>What numbers should I input into my color corrector?</p>
 
 <p><style type="text/css">
@@ -29,7 +29,6 @@
     </tr>
 </table></p>
 <p><button onclick="validate()">Submit</button></p>
-<p><button onclick="validate2()">Return to map</button>
 
   <script>
     function multiplyMatrices(m1, m2) {
@@ -60,17 +59,8 @@
       var i = document.getElementById("i").value;
       var j = document.getElementById("j").value
 
-      var matr = [[a, b, c], [e, f, g], [h, i, j]];
-      var cubed = multiplyMatrices(matr, multiplyMatrices(matr, matr));	
-      if (cubed[0][0] == 2 && cubed[0][1] == 0 && cubed[0][2] == 0 && cubed[1][0] == 0 && cubed[1][1] == 2 && cubed[1][2] == 0 && cubed[2][0] == 0 && cubed[2][1] == 0 && cubed[2][2] == 2) {
-        document.cookie = "indian = done; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-        window.location.href = "https://mbarz6.github.io/indianwin.html";
-      } else {
-        alert("Incorrect!");
+      if ((179 * c) % 256 == 250 && (179 * f) % 256 == 250 && (179 * j) % 256 == 103 && (a * 250 + b * 250 + c * 55) % 256 == 250 && (d * 250 + e * 250 + f * 55) % 256 == 250 && (g * 250 + h * 250 + i * 55) % 256 == 55 && (512 -a - c) % 256 == 250 && (512 - d - f) % 256 == 250 && (512 - g - i) % 256 == 55) {
+        window.location.href = "https://mbarz6.github.io/sixmonths/firstsuccess.html";         
       }
-    }
-    function validate2() {
-      document.cookie = "senttomap = yes";
-      window.location.href = "https://mbarz6.github.io/index.html";
     }
   </script>
