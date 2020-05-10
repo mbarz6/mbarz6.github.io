@@ -62,16 +62,7 @@
       var i = document.getElementById("i").value;
       var j = document.getElementById("j").value
 
-      alert(mod256(179 * c));
-      alert(mod256(179 * f));
-      alert(mod256(179 * j));
-      alert(mod256(a * 250 + b * 250 + c * 55));
-      alert(mod256(d * 250 + e * 250 + f * 55));
-      alert(mod256(h * 250 + i * 250 + j * 55));
-      alert(mod256(-a-c));
-      alert(mod256(-d-f));
-      alert(mod256(-h-j));
-      if (mod256(179 * c) == 250 && mod256(179 * f) == 250 && mod256(179 * j) == 55 && mod256(a * 250 + b * 250 + c * 55) == 250 && mod256(d * 250 + e * 250 + f * 55) == 250 && mod256(h * 250 + i * 250 + j * 55) == 55 && mod256(-a - c) == 250 && mod256(- d - f) == 250 && mod256(- h - j) == 55) {
+      if (mod256(179 * c) == 250 && mod256(179 * g) == 250 && mod256(179 * j) == 55 && mod256(a * 250 + b * 250 + c * 55) == 250 && mod256(e * 250 + f * 250 + g * 55) == 250 && mod256(h * 250 + i * 250 + j * 55) == 55 && mod256(-a - c) == 250 && mod256(- e - g) == 250 && mod256(- h - j) == 55) {
         window.location.href = "https://mbarz6.github.io/sixmonths/firstsuccess.html";         
       } else {
         alert("Try again!"); 
