@@ -1,0 +1,78 @@
+<h1 style="text-align: center;">First Animal Encounter!</h1>
+<p>Can you help out this poor yellow pig‽</p>
+<p>What numbers should I input into my color corrector?</p>
+<p style="text-align: center;"><img src="images/submarineintegral.png"/></p>
+<p style="text-align: left;">While looking through the submarine's file system, Leah noticed a log written by Max Mudpuppy. In the log, he recorded the following two observations about the submarine's path: When you ask it to drive from a point&nbsp;<em>P </em>to a point <em>Q</em> having a <em>different</em> <em>y</em>-coordinate than <em>P</em>, it moves in the arc of a circle connecting the two points which has a center on the <em>x</em>-axis; and if you ask it to move to a point with the <em>same</em> <em>y</em>-coordinate, it's <em>x</em>-coordinate never changes. <br /><br />Leah has intercepted a command from Max Mudpuppy, telling the submarine to move from it's current position of (1, 1) to the point (1, <em>e</em><sup>2</sup>) and then start spraying bacteria. The submarine has calculated it's estimated time of arrival at that position by dividing the distance that needs to be travelled by its speed. However, recall that the submarine errenously computes distances using the formula</p>
+<p style="text-align: center;"><img src="images/submarineintegral.png"/></p>
+<p style="text-align: left;">Leah knows the true length of the path the submarine will follow. However, to determine the ETA of the submarine (which she needs to know to intercept it without it noticing her), she'll need to know it's speed. She plans to reverse engineer the submarine's speed by calculating the distance <em>D</em> the submarine <em>thinks</em> it travels between (1, 1) and (1, <em>e</em><sup>2</sup>).</p>
+<p style="text-align: left;">Help Leah by computing <em>D</em>.</p>
+
+<p><style type="text/css">
+  .tg  {border-collapse:collapse;border-spacing:0;}
+  .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+  .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+  .tg .tg-0lax{text-align:left;vertical-align:top}
+  </style>
+ <table class="tg">
+    <tr>
+      <th class="tg-0lax"><input type="text" style="width: 51px;" id="a"></th>
+      <th class="tg-0lax"><input type="text" style="width: 51px;" id="b"></th>
+      <th class="tg-0lax"><input type="text" style="width: 51px;" id="c"></th>
+    </tr>
+    <tr>
+      <td class="tg-0lax"><input type="text" style="width: 51px;" id="e"></td>
+      <td class="tg-0lax"><input type="text" style="width: 51px;" id="f"></td>
+      <td class="tg-0lax"><input type="text" style="width: 51px;" id="g"></td>
+    </tr>
+    <tr>
+      <td class="tg-0lax"><input type="text" style="width: 51px;" id="h"></td>
+      <td class="tg-0lax"><input type="text" style="width: 51px;" id="i"></td>
+      <td class="tg-0lax"><input type="text" style="width: 51px;" id="j"></td>
+    </tr>
+</table></p>
+<p><button onclick="validate()">Submit</button></p>
+<p><button onclick="validate2()">Return to map</button>
+
+  <script>
+    function multiplyMatrices(m1, m2) {
+      var result = [];
+      for (var i = 0; i < m1.length; i++) {
+        result[i] = [];
+        for (var j = 0; j < m2[0].length; j++) {
+          var sum = 0;
+          for (var k = 0; k < m1[0].length; k++) {
+            sum += m1[i][k] * m2[k][j];
+          }
+          result[i][j] = sum;
+        }
+      }
+      return result;
+    }
+
+    function validate() {
+      // this validation function actually just cubes your matrix
+      // so cheating this validation is actually impossible!
+      var a = document.getElementById("a").value;
+      var b = document.getElementById("b").value;
+      var c = document.getElementById("c").value;
+      var e = document.getElementById("e").value;
+      var f = document.getElementById("f").value;
+      var g = document.getElementById("g").value;
+      var h = document.getElementById("h").value;
+      var i = document.getElementById("i").value;
+      var j = document.getElementById("j").value
+
+      var matr = [[a, b, c], [e, f, g], [h, i, j]];
+      var cubed = multiplyMatrices(matr, multiplyMatrices(matr, matr));	
+      if (cubed[0][0] == 2 && cubed[0][1] == 0 && cubed[0][2] == 0 && cubed[1][0] == 0 && cubed[1][1] == 2 && cubed[1][2] == 0 && cubed[2][0] == 0 && cubed[2][1] == 0 && cubed[2][2] == 2) {
+        document.cookie = "indian = done; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+        window.location.href = "https://mbarz6.github.io/indianwin.html";
+      } else {
+        alert("Incorrect!");
+      }
+    }
+    function validate2() {
+      document.cookie = "senttomap = yes";
+      window.location.href = "https://mbarz6.github.io/index.html";
+    }
+  </script>
