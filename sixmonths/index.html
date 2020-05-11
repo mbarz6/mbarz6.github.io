@@ -1,17 +1,29 @@
+<h2 style="text-align: center;">Starting the Safari!</h2>
+<iframe src="https://drive.google.com/file/d/1rjXE95wurecRfWPJQIgsfRNb5szyx48Q/preview" width="640" height="480"></iframe>
+<p>Now, can you help me cross the street?</p>
 
-<h1 style="text-align: center;">Welcome to the Safari!</h1>
-<p>Congraulations on helping me cross the road! Now, we can begin the safari! Firstly, I encountered Michelle's birthday! Happy birthday, Michelle!</p>
-<p>To continue on the Safari, click <a href="first.html">here.</a></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p><img src="https://mbarz6.github.io/images/go%20michelle.JPG" alt="" width="1000" style="transform:rotate(90deg);"/></p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-  <p>(Click <a href="archived.html">here</a> to see the first puzzle, which was sent via Telegram, if you desire.)</p>
+<p>Let <strong>F</strong><sub>8 </sub>denote the finite field on 8 elements.</p>
+<p>There are infinitely many different polynomials with coefficients in <strong>F</strong><sub>8</sub>, for example the infinite list</p>
+<p><em>x</em></p>
+<p>However, since <strong>F</strong><sub>8</sub> is finite, there are only finitely many distinct functions on <strong>F</strong><sub>8</sub>, in particular only 8<sup>8</sup>. Of those finitely many functions, how many are polynomials? Phrased differently, if instead of considering two polynomials to be the same if they have exactly the same coefficients and instead say two polynomials are the same if the map the same inputs to the same outputs, how many distinct polynomials are there?</p>
+
+<p> Answer: <input type="text" id="password"><br></p>
+<p><button onclick="validate()">Submit</button></p>
+
+<script>
+function validate() {
+  // to prevent one from just guessing the right answer, the validation is a little... complicated
+  var x = document.getElementById("password").value
+  // go Chinese Remainder Theorem! there's a unique number in [0, 9539*9973] with those two conditions. 
+  if (x <= 9539 * 9973 && x >= 0 && x % 9539 == 7654 && x % 9973 == 2630) {
+	  window.location.href = "https://mbarz6.github.io/atlantic1win.html";
+  } else {
+	  alert("Try again!");
+  }
+	
+}
+	function validate2() {
+		document.cookie = "senttomap = yes";
+		window.location.href = "https://mbarz6.github.io/index.html";
+	}
+</script>
