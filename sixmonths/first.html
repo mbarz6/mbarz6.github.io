@@ -1,5 +1,5 @@
 <h1 style="text-align: center;">First Animal Encounter!</h1>
-<iframe src="https://drive.google.com/file/d/1SFO2tS0GdnPETcN5TQJcyAkxxN7ge8XU/preview" width="640" height="480"></iframe>
+<p align="center"><iframe src="https://drive.google.com/file/d/1SFO2tS0GdnPETcN5TQJcyAkxxN7ge8XU/preview" width="640" height="480"></iframe></p>
 <p>Can you help out this poor yellow pig‽ While it's hard to see precisely in the video, my super accurate eyeballs have determined that the pig's yellow is (250, 250, 55), and the discolored oink is (0, 0, 179).</p>
 <p>What numbers should I input into my color corrector?</p>
 
@@ -57,6 +57,9 @@
       var c = document.getElementById("c").value;
       var e = document.getElementById("e").value;
       var f = document.getElementById("f").value;
+      // in case you're reading the code: I was a big dummy and forgot about the letter d, causing much much confusing 
+      // during debugging when the answer I was almost certain was correct was getting flagged as wrong, since the Javascript verification just silently gives up when it encounters
+      // the variable name `d,' which I assumed would denote the first entry of the second row, when in actuality there is no variable d...
       var g = document.getElementById("g").value;
       var h = document.getElementById("h").value;
       var i = document.getElementById("i").value;
