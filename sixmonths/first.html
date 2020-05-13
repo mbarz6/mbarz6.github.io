@@ -66,6 +66,7 @@
       var j = document.getElementById("j").value
 
       if (mod256(179 * c) == 250 && mod256(179 * g) == 250 && mod256(179 * j) == 55 && mod256(a * 250 + b * 250 + c * 55) == 250 && mod256(e * 250 + f * 250 + g * 55) == 250 && mod256(h * 250 + i * 250 + j * 55) == 55 && mod256(-a - c) == 250 && mod256(- e - g) == 250 && mod256(- h - j) == 55) {
+        document.cookie = "first = done; expires=Fri, 31 Dec 9999 23:59:59 GMT";
         window.location.href = "https://mbarz6.github.io/sixmonths/firstsuccess.html";         
       } else {
         alert("Try again!"); 
