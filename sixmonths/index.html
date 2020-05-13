@@ -10,6 +10,8 @@
 <p> Answer: <input type="text" id="password"><br></p>
 <p><button onclick="validate()">Submit</button></p>
 
+<p>(Psst... already started the Safari, and want to go back to where you left off? Click this button <button onclick="validate2()">button</button> to go back to the where you last got off.)</p>
+
 <script>
 function validate() {
   // to prevent one from just guessing the right answer, the validation is a little... complicated
@@ -17,13 +19,26 @@ function validate() {
   // go Chinese Remainder Theorem! there's a unique number in [0, 9539*9973] with those two conditions. 
   if (x <= 9539 * 9973 && x >= 0 && x % 9539 == 7654 && x % 9973 == 2630) {
 	  window.location.href = "https://mbarz6.github.io/sixmonths/welcome.html";
+	  document.cookie = "index = done; expires=Fri, 31 Dec 9999 23:59:59 GMT";
   } else {
 	  alert("Try again!");
   }
 	
 }
 	function validate2() {
-		document.cookie = "senttomap = yes";
-		window.location.href = "https://mbarz6.github.io/index.html";
+		var index = document.cookie.replace(/(?:(?:^|.*;\s*)index\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+		var first = document.cookie.replace(/(?:(?:^|.*;\s*)first\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+		var second = document.cookie.replace(/(?:(?:^|.*;\s*)second\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+		var third = document.cookie.replace(/(?:(?:^|.*;\s*)third\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+		
+		if (third == "done") {
+			window.location.href = "https://mbarz6.github.io/sixmonths/thirdsuccess.html"; 	
+		} else if (second == "done") {
+			window.location.href = "https://mbarz6.github.io/sixmonths/secondsuccess.html"; 	
+		} else if (first == "done") {
+			window.location.href = "https://mbarz6.github.io/sixmonths/firstsuccess.html"; 
+		} else {
+			alert("Sorry! It seems this is where you last left off; contact Michael if you think this is incorrect.");
+		}
 	}
 </script>
