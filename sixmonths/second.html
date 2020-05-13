@@ -13,6 +13,7 @@ function validate() {
   // to prevent one from just guessing the right answer, the validation is a little... complicated
   var x = document.getElementById("password").value
   if (x * x * x - 272 * x * x + 121104 * x - 32940288 == 0) {
+	  document.cookie = "second = done; expires=Fri, 31 Dec 9999 23:59:59 GMT";
 	window.location.href = "https://mbarz6.github.io/sixmonths/secondsuccess.html";
   } else {
 	alert("Try again!");
