@@ -3,15 +3,16 @@
 <p><button onclick="validate()">Submit</button></p>
 
 <p id="output">Dogs</p>
+<p id="bezout">Dogs</p>
   
 <script>
 function validate() {
   var outbox = document.getElementById("output");
-  //var bezbox = document.getElementById("bezout");
+  var bezbox = document.getElementById("bezout");
   var num1   = parseInt(document.getElementById("num1").value);
   var num2   = parseInt(document.getElementById("num2").value);
   outbox.innerHTML = euclid(num1, num2);
-  //bezbox.innerHTML = bezout(num1, num2);
+  bezbox.innerHTML = bezout(num1, num2);
 }
 
 function euclid(a, b) {
@@ -28,6 +29,9 @@ function euclid(a, b) {
 }
 
 function bezout(a, b) {
+  if (a == 437 && b == 323) {
+        return "Hey dogs! This is a homework problem.";
+    }
     var left = [];
     var first = [];
     var quots = [];
@@ -54,24 +58,29 @@ function bezout(a, b) {
     
     let g = (rems[0]).toString();
 
-    var ruff = "";
+    var ruff = [];
     var x = 1;
     var y = -quots[0];
     var n = left[0];
     var m = first[0];
-    ruff = g + " = " + n.toString() + " * " + x.toString() + " + " + m.toString() + " * " + y.toString() + "<br>" + ruff;
+    ruff.push(g + " = " + n.toString() + " * " + x.toString() + " + " + m.toString() + " * " + y.toString() + "<br>");
     for (let i = 1; i < quots.length; i++) {
         n = left[i];
         m = first[i];
         
         let temp = x;
-        x = x;
-        y = temp;
+        x = y;
+        y = temp - quots[i] * y;
         
-        ruff = g + " = " + n.toString() + " * " + x.toString() + " + " + m.toString() + " * " + y.toString() + "<br>" + ruff;
+        ruff.push("Backsubstitute " + first[i-1] + " = " + n.toString() + " - " + left[i-1] + " * " + quots[i] + ", so that the " + first[i-1] + " * " + x + " becomes " + n + " * " + x + " + " + left[i-1] + " * " + (quots[i] * x) + ". Then we add the " + left[i-1] + " * " + temp + " to get <br>");
+        ruff.push(g + " = " + n.toString() + " * " + x.toString() + " + " + m.toString() + " * " + y.toString() + ".<br>");
     }
 
-    return ruff;
+    var woof = "";
+    for (let i = 0; i < ruff.length; i++) {
+        woof = woof + ruff[i];
+    }
+    return woof;
 }
 
 </script>
