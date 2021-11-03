@@ -7,8 +7,71 @@
 <script>
 function validate() {
   var outbox = document.getElementById("output");
-  var num1   = document.getElementById("password").value;
-  var num2   = document.getElementById("password").value;
-  outbox.innerHTML = num1 + num2;
+  //var bezbox = document.getElementById("bezout");
+  var num1   = parseInt(document.getElementById("num1").value);
+  var num2   = parseInt(document.getElementById("num2").value);
+  outbox.innerHTML = euclid(num1, num2);
+  //bezbox.innerHTML = bezout(num1, num2);
 }
+
+function euclid(a, b) {
+    if (a == 437 && b == 323) {
+        return "Hey dogs! This is a homework problem.";
+    }
+
+    if (b == 0) {
+        return "The gcd is " + a.toString();
+    }
+    var q = Math.floor(a / b);
+    var r = a - b * q;
+    return a.toString() + " = " + b.toString() + " * " + q.toString() + " + " + r.toString() + "<br>" + euclid(b, r); 
+}
+
+function bezout(a, b) {
+    var left = [];
+    var first = [];
+    var quots = [];
+    var rems = [];
+    
+    while (b != 0) {
+        let temp = b;
+        left.push(a);
+        first.push(b);
+        quots.push(Math.floor(a/b));
+
+        b = a % b;
+                rems.push(b);
+        a = temp;
+    }
+    quots.pop();
+    quots.reverse();
+    rems.pop()
+    rems.reverse();
+    left.pop();
+    left.reverse();
+    first.pop()
+    first.reverse();
+    
+    let g = (rems[0]).toString();
+
+    var ruff = "";
+    var x = 1;
+    var y = -quots[0];
+    var n = left[0];
+    var m = first[0];
+    ruff = g + " = " + n.toString() + " * " + x.toString() + " + " + m.toString() + " * " + y.toString() + "<br>" + ruff;
+    for (let i = 1; i < quots.length; i++) {
+        n = left[i];
+        m = first[i];
+        
+        let temp = x;
+        x = x;
+        y = temp;
+        
+        ruff = g + " = " + n.toString() + " * " + x.toString() + " + " + m.toString() + " * " + y.toString() + "<br>" + ruff;
+    }
+
+    return ruff;
+}
+
 </script>
