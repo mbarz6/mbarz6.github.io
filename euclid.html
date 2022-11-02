@@ -145,7 +145,7 @@ if (a == 63210 && b == 12390) {
         x = y;
         y = temp - quots[i] * y;
         
-        ruff.push("Backsubstitute <font color=\"red\">" + first[i-1] + "</font> = <font color=\"green\">" + n.toString() + "</font> - " + quots[i] + " * <font color=\"blue\">" + left[i-1] + "</font>, so that the " + x + " * <font color=\"red\">" + first[i-1] + "</font> becomes " + x + " * <font color=\"green\">" + n + "</font> + " + (-quots[i] * x) + " * <font color=\"blue\">" + left[i-1] + "</font>. Then we add the " + temp + " * <font color=\"blue\">" + left[i-1] + "</font> to the " + (-quots[i] * x) + " * <font color=\"blue\">" + left[i-1] + " to get <br>");
+        ruff.push("Backsubstitute <font color=\"red\">" + first[i-1] + "</font> = <font color=\"green\">" + n.toString() + "</font> - " + quots[i] + " * <font color=\"blue\">" + left[i-1] + "</font>, so that the " + x + " * <font color=\"red\">" + first[i-1] + "</font> becomes " + x + " * <font color=\"green\">" + n + "</font> + " + (-quots[i] * x) + " * <font color=\"blue\">" + left[i-1] + "</font>. Then we add the " + temp + " * <font color=\"blue\">" + left[i-1] + "</font> to the " + (-quots[i] * x) + " * <font color=\"blue\">" + left[i-1] + "</font> to get <br>");
         ruff.push(g + " = " + x.toString() + " * " + n.toString() + " + " + y.toString() + " * " + m.toString() + ".<br>");
     }
 
