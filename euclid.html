@@ -113,7 +113,7 @@ if (a == 323 && b == 437) {
         x = y;
         y = temp - quots[i] * y;
         
-        ruff.push("Backsubstitute " + first[i-1] + " = " + n.toString() + " - " + left[i-1] + " * " + quots[i] + ", so that the " + first[i-1] + " * " + x + " becomes " + n + " * " + x + " - " + left[i-1] + " * " + (quots[i] * x) + ". Then we add the " + left[i-1] + " * " + temp + " to get <br>");
+        ruff.push("Backsubstitute " + first[i-1] + " = " + n.toString() + " - " + left[i-1] + " * " + quots[i] + ", so that the " + first[i-1] + " * " + x + " becomes " + n + " * " + x + " + " + left[i-1] + " * " + (-quots[i] * x) + ". Then we add the " + left[i-1] + " * " + temp + " to the " + left[i-1] + " * " + (-quots[i] * x) + " to get <br>");
         ruff.push(g + " = " + n.toString() + " * " + x.toString() + " + " + m.toString() + " * " + y.toString() + ".<br>");
     }
 
