@@ -145,8 +145,8 @@ if (a == 63210 && b == 12390) {
         x = y;
         y = temp - quots[i] * y;
         
-        ruff.push("Backsubstitute " + first[i-1] + " = " + n.toString() + " - " + left[i-1] + " * " + quots[i] + ", so that the " + first[i-1] + " * " + x + " becomes " + n + " * " + x + " + " + left[i-1] + " * " + (-quots[i] * x) + ". Then we add the " + left[i-1] + " * " + temp + " to the " + left[i-1] + " * " + (-quots[i] * x) + " to get <br>");
-        ruff.push(g + " = " + n.toString() + " * " + x.toString() + " + " + m.toString() + " * " + y.toString() + ".<br>");
+        ruff.push("Backsubstitute " + first[i-1] + " = " + n.toString() + " - " + quots[i] + " * " + left[i-1] + ", so that the " + x + " * " + first[i-1] + " becomes " + x + " * " + n + " + " + (-quots[i] * x) + " * " + left[i-1] + ". Then we add the " + temp + " * " + left[i-1] + " to the " + (-quots[i] * x) + " * " + left[i-1] + " to get <br>");
+        ruff.push(g + " = " + x.toString() + " * " + n.toString() + " + " + y.toString() + " * " + m.toString() + ".<br>");
     }
 
     var woof = "";
