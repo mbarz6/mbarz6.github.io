@@ -61,7 +61,7 @@ if (a == 63210 && b == 12390) {
     }
     var q = Math.floor(a / b);
     var r = a - b * q;
-    return a.toString() + " = " + b.toString() + " * " + q.toString() + " + " + r.toString() + "<br>" + euclid(b, r); 
+    return a.toString() + " = " + q.toString() + " * " + b.toString() + " + " + r.toString() + "<br>" + euclid(b, r); 
 }
 
 function bezout(a, b) {
