@@ -18,15 +18,33 @@
             background-color: red;
             border-radius: 50%;
         }
+        .matrix-input {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+        }
+        .matrix-input input {
+            width: 40px;
+        }
+        .matrix-input input:nth-child(2),
+        .matrix-input input:nth-child(4) {
+            margin-left: 5px;
+        }
     </style>
 </head>
 <body>
 
 <h1>Coordinate Grid Transformation</h1>
 
-<label for="matrix">Enter 2x2 Matrix Coefficients:</label>
-<input type="text" id="matrix" placeholder="a b c d">
-<button onclick="transformGrid()">Transform</button>
+<div class="matrix-input">
+    <input type="text" id="a" placeholder="a">
+    <input type="text" id="b" placeholder="b">
+    <input type="text" id="c" placeholder="c">
+    <input type="text" id="d" placeholder="d">
+</div>
+
+<button onclick="animateTransform()">Transform</button>
+<button onclick="resetTransform()">Reset</button>
 
 <div id="grid"></div>
 
@@ -44,20 +62,50 @@
         }
     }
 
-    function transformGrid() {
-        const matrixInput = document.getElementById('matrix').value;
-        const matrixCoefficients = matrixInput.split(' ').map(Number);
+    function animateTransform() {
+        const matrixCoefficients = [
+            parseFloat(document.getElementById('a').value),
+            parseFloat(document.getElementById('b').value),
+            parseFloat(document.getElementById('c').value),
+            parseFloat(document.getElementById('d').value)
+        ];
 
+        const points = document.getElementsByClassName('point');
+
+        let startTime;
+        function animate(time) {
+            if (!startTime) startTime = time;
+            const progress = (time - startTime) / 1000; // Convert to seconds
+            const identityMatrix = [1, 0, 0, 1];
+            const animatedMatrix = matrixCoefficients.map((coeff, index) => coeff * progress + identityMatrix[index] * (1 - progress));
+
+            for (let i = 0; i < points.length; i++) {
+                const x = i % 21 - 10;
+                const y = Math.floor(i / 21) - 10;
+
+                const newX = animatedMatrix[0] * x + animatedMatrix[1] * y;
+                const newY = animatedMatrix[2] * x + animatedMatrix[3] * y;
+
+                points[i].style.left = (newX + 10) * 20 + 'px';
+                points[i].style.top = (newY + 10) * 20 + 'px';
+            }
+
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            }
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    function resetTransform() {
         const points = document.getElementsByClassName('point');
         for (let i = 0; i < points.length; i++) {
             const x = i % 21 - 10;
             const y = Math.floor(i / 21) - 10;
 
-            const newX = matrixCoefficients[0] * x + matrixCoefficients[1] * y;
-            const newY = matrixCoefficients[2] * x + matrixCoefficients[3] * y;
-
-            points[i].style.left = (newX + 10) * 20 + 'px';
-            points[i].style.top = (newY + 10) * 20 + 'px';
+            points[i].style.left = (x + 10) * 20 + 'px';
+            points[i].style.top = (y + 10) * 20 + 'px';
         }
     }
 
