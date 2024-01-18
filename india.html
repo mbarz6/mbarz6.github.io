@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinate Grid Transformation</title>
+    <style>
+        #grid {
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+            position: relative;
+        }
+        .point {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Coordinate Grid Transformation</h1>
+
+<label for="matrix">Enter 2x2 Matrix Coefficients:</label>
+<input type="text" id="matrix" placeholder="a b c d">
+<button onclick="transformGrid()">Transform</button>
+
+<div id="grid"></div>
+
+<script>
+    function drawGrid() {
+        const grid = document.getElementById('grid');
+        for (let x = -10; x <= 10; x++) {
+            for (let y = -10; y <= 10; y++) {
+                const point = document.createElement('div');
+                point.className = 'point';
+                point.style.left = (x + 10) * 20 + 'px';
+                point.style.top = (y + 10) * 20 + 'px';
+                grid.appendChild(point);
+            }
+        }
+    }
+
+    function transformGrid() {
+        const matrixInput = document.getElementById('matrix').value;
+        const matrixCoefficients = matrixInput.split(' ').map(Number);
+
+        const points = document.getElementsByClassName('point');
+        for (let i = 0; i < points.length; i++) {
+            const x = i % 21 - 10;
+            const y = Math.floor(i / 21) - 10;
+
+            const newX = matrixCoefficients[0] * x + matrixCoefficients[1] * y;
+            const newY = matrixCoefficients[2] * x + matrixCoefficients[3] * y;
+
+            points[i].style.left = (newX + 10) * 20 + 'px';
+            points[i].style.top = (newY + 10) * 20 + 'px';
+        }
+    }
+
+    drawGrid();
+</script>
+
+</body>
+</html>
